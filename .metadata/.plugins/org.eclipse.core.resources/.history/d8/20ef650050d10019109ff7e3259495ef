@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><h1>Happy Shopping</h1>
+<meta charset="ISO-8859-1">
+<title>Website</title>
+</head>
+<body bgcolor = "cyan">
+<table width='50%' border='1px'>
+<tr>
+<th>Product Name</th><th>Quantity</th><th>Price</th>
+</tr>
+<tr>
+<td>Soap</td><td>1</td><td>50</td>
+<tr>
+<td>Shampoo</td><td>1</td><td>120</td>
+</tr>
+<tr>
+<td>ToothBrush</td><td>1</td><td>50</td>
+</tr>
+<tr>
+<td>Hair Oil</td><td>1</td><td>65</td>
+</tr>
+</table>
+<b><i>Enter the product that you want to purchase : </i></b>
+<form action='ShoppingServlet' method="post">
+Product Name : <input type="text" name="prod_name"><br>
+<p></p>
+
+<input type="submit" value="add to cart">
+<input type="submit" name="gen_invoice" value="Generate Invoice">
+</form>
+</body>
+</html>

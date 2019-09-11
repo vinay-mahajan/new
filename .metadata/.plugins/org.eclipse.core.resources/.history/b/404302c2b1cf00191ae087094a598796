@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Form</title>
+</head>
+<body>
+<form action="MyServlet" method="post">
+Name: <input type="text" name="user"/><br>
+Email:<input type="text" name="email"/><br>
+<input type="submit" name="register" value="register"/>
+</form>
+</body>
+</html>

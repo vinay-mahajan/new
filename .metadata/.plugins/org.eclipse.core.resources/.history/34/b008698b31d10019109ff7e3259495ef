@@ -1,0 +1,14 @@
+package testcookie;
+
+import java.util.ArrayList;
+
+public class Invoice {
+	public static String generateInvoice(ArrayList<Product> al) {
+		StringBuffer sb = new StringBuffer();
+		sb.append(String.format("%-10s %-10s %-10s", "Produt Name","Quantity","Price"));
+		for(Product p:al) {
+			sb.append(String.format("%-10s %-10s %-10s", p.getProductName(),p.getPrice(),p.getPrice()));
+		}
+		return null;
+	}
+}

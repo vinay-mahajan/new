@@ -1,0 +1,28 @@
+package testcookie;
+
+public class Product {
+	private String productName;
+	private int quantity;
+	private double price;
+	
+	public Product(String productName, int quantity) {
+		this.productName = productName;
+		this.quantity = quantity;
+		if(productName.equals("Soap"))
+			price = 50;
+		if(productName.equals("Shampoo"))
+			price = 120;
+		if(productName.equals("ToothBrush"))
+			price = 50;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public double getPrice() {
+		return price;
+	}
+	
+}

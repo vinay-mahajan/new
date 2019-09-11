@@ -1,0 +1,10 @@
+package testcookie;
+
+import java.util.ArrayList;
+
+public class Invoice {
+	public static String generateInvoice(ArrayList<Product> al
+			) {
+		
+	}
+}

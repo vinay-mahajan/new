@@ -1,0 +1,64 @@
+package testcookie;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class SeondServlet
+ */
+@WebServlet("/SecondServlet")
+public class SecondServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		String name = request.getParameter("prname").toLowerCase();
+		int qty = Integer.parseInt(request.getParameter("qty"));
+		PrintWriter out = response.getWriter();
+		int sum = 0;
+		switch(name) {
+		case "soap":
+			sum = qty*50;
+			out.println("Price = "+sum);
+			break;
+		case "shampoo":
+			sum = qty*120;
+			out.println("Price = "+sum);
+			break;
+		case "toothbrush":
+			sum = qty*50;
+			out.println("Price = "+sum);
+			break;
+		default:
+			out.println("Product is not available");
+		}
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		/*response.setContentType("text.html");
+		String name = request.getParameter("user");
+		PrintWriter out = response.getWriter();
+		out.println("Welcome "+name);*/
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package testcookie;
+
+public class Invoice {
+	public static String generateInvoice(FirstServlet.al) {
+		
+	}
+}
